@@ -5,18 +5,18 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
 <template>
   <section id="home" class="hero">
 
-    <!-- Decorative background -->
+    <!-- Background decoration -->
     <div class="bg-shape bg-shape-one"></div>
     <div class="bg-shape bg-shape-two"></div>
 
     <div class="hero-container">
 
-      <!-- =================================================
+      <!-- =====================================================
            LEFT CONTENT
-      ================================================== -->
+      ====================================================== -->
       <div class="hero-left">
 
-        <!-- Badge -->
+        <!-- Role Badge -->
         <div class="role-badge">
           <span class="badge-dot"></span>
           Automation Test Engineer | QA
@@ -28,7 +28,7 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
           <span>Sumanjali</span>
         </h1>
 
-        <!-- Title -->
+        <!-- Professional Title -->
         <h2 class="hero-title">
           Automation Test Engineer
           <span>• QA</span>
@@ -36,22 +36,21 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
 
         <!-- Summary -->
         <p class="hero-summary">
-          Computer Science graduate with 2+ years of experience
-          in technical support, incident triage, root cause analysis
-          and software test automation across digital and healthcare
+          Automation Test Engineer with 2+ years of experience in software
+          testing and test automation, with hands-on expertise in Java,
+          Playwright, Selenium WebDriver, TestNG, JUnit and Maven.
+          Experienced in functional, regression and API testing, defect
+          management and root cause analysis across digital and healthcare
           environments.
         </p>
-
 
         <!-- =================================================
              ABOUT ME
         ================================================== -->
-
         <div class="about-card">
 
           <div class="about-heading">
             <span class="about-line"></span>
-
             <h3>About Me</h3>
           </div>
 
@@ -59,15 +58,16 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
             Computer Science graduate with a B.Tech in Computer Science
             Engineering and 79% marks, building a career in software test
             automation with hands-on experience in
-            <strong>Java, Playwright, Selenium WebDriver, TestNG,
-            JUnit and Maven.</strong>
+            <strong>
+              Java, Playwright, Selenium WebDriver, TestNG, JUnit and Maven.
+            </strong>
           </p>
 
           <p>
             Experienced in designing and maintaining automation scripts,
-            Page Object Model frameworks, functional and regression
-            testing, API testing with REST APIs and Postman, and defect
-            management using Jira.
+            Page Object Model frameworks, functional and regression testing,
+            API testing with REST APIs and Postman, and defect management
+            using Jira.
           </p>
 
           <p>
@@ -78,81 +78,59 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
 
         </div>
 
-
         <!-- =================================================
              CONTACT INFORMATION
         ================================================== -->
-
         <div class="contact-grid">
 
           <!-- Phone -->
           <div class="contact-card">
+            <div class="contact-icon">☎</div>
 
-            <div class="contact-icon">
-              ☎
-            </div>
-
-            <div>
+            <div class="contact-text">
               <span>Phone</span>
               <strong>+44 7585 729435</strong>
             </div>
-
           </div>
-
 
           <!-- Email -->
           <div class="contact-card">
+            <div class="contact-icon">✉</div>
 
-            <div class="contact-icon">
-              ✉
-            </div>
-
-            <div>
+            <div class="contact-text">
               <span>Email</span>
               <strong>sumanjali5.v@gmail.com</strong>
             </div>
-
           </div>
-
 
           <!-- Location -->
           <div class="contact-card">
+            <div class="contact-icon">●</div>
 
-            <div class="contact-icon">
-              ●
-            </div>
-
-            <div>
+            <div class="contact-text">
               <span>Location</span>
               <strong>Northampton, UK</strong>
             </div>
-
           </div>
-
 
           <!-- Specialisation -->
           <div class="contact-card">
+            <div class="contact-icon">▣</div>
 
-            <div class="contact-icon">
-              ▣
-            </div>
-
-            <div>
+            <div class="contact-text">
               <span>Specialisation</span>
               <strong>Test Automation & QA</strong>
             </div>
-
           </div>
 
         </div>
 
-
         <!-- =================================================
              ACTION BUTTONS
         ================================================== -->
-
         <div class="hero-actions">
 
+          <!-- Contact -->
           <a
             href="#contact"
             class="primary-button"
@@ -162,7 +140,7 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
             <strong>→</strong>
           </a>
 
-
+          <!-- Experience -->
           <a
             href="#experience"
             class="secondary-button"
@@ -171,18 +149,27 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
             <strong>↓</strong>
           </a>
 
+          <!-- Download Resume -->
+          <a
+            href="/Sumanjali_Yelati_Resume_Automation_Test_Engineer_Updated.docx"
+            download
+            class="resume-button"
+          >
+            <span>↓</span>
+            Download Resume
+          </a>
+
         </div>
 
       </div>
 
 
-      <!-- =================================================
+      <!-- =====================================================
            RIGHT CONTENT
-      ================================================== -->
-
+      ====================================================== -->
       <div class="hero-right">
 
-        <!-- Photo -->
+        <!-- Profile Photo -->
         <div class="photo-area">
 
           <div class="photo-decoration"></div>
@@ -193,65 +180,55 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
             class="profile-photo"
           />
 
-          <!-- Experience badge -->
+          <!-- Floating Experience Badge -->
           <div class="experience-badge">
-
             <strong>2+</strong>
 
             <span>
               Years<br />
               Experience
             </span>
-
           </div>
 
         </div>
 
 
         <!-- =================================================
-             QUICK STATS
+             STATS CARD
         ================================================== -->
-
         <div class="stats-card">
 
+          <!-- Experience -->
           <div class="stat">
-
             <strong>2+</strong>
 
             <span>
               Years<br />
               Experience
             </span>
-
           </div>
-
 
           <div class="stat-divider"></div>
 
-
+          <!-- QA -->
           <div class="stat">
-
             <strong>QA</strong>
 
             <span>
               Test<br />
               Automation
             </span>
-
           </div>
-
 
           <div class="stat-divider"></div>
 
-
+          <!-- Java -->
           <div class="stat">
-
             <strong>Java</strong>
 
             <span>
               Automation
             </span>
-
           </div>
 
         </div>
@@ -261,10 +238,9 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
     </div>
 
 
-    <!-- =================================================
+    <!-- =====================================================
          TECHNOLOGY STRIP
-    ================================================== -->
-
+    ====================================================== -->
     <div class="technology-strip">
 
       <span>Java</span>
@@ -287,275 +263,277 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
 
 <style scoped>
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .hero {
   position: relative;
-
-  width: 100%;
-  min-height: 100vh;
-
-  padding: 55px 5% 35px;
+  overflow: hidden;
 
   background:
     radial-gradient(
       circle at 85% 15%,
-      rgba(15, 174, 157, 0.10),
-      transparent 25%
+      rgba(13, 148, 136, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 5% 85%,
+      rgba(13, 148, 136, 0.07),
+      transparent 28%
     ),
     #ffffff;
 
-  overflow: hidden;
+  padding: 55px 40px 40px;
+
+  color: #102a43;
 }
 
 
-/* =====================================================
+/* =========================================================
    BACKGROUND SHAPES
-===================================================== */
+========================================================= */
 
 .bg-shape {
   position: absolute;
-
   border-radius: 50%;
-
   pointer-events: none;
-
-  background: rgba(225, 247, 244, 0.65);
+  z-index: 0;
 }
 
 .bg-shape-one {
-  width: 180px;
-  height: 180px;
+  width: 420px;
+  height: 420px;
 
-  right: -70px;
-  top: -60px;
+  top: -230px;
+  right: -160px;
+
+  border: 1px solid rgba(13, 148, 136, 0.08);
 }
 
 .bg-shape-two {
-  width: 220px;
-  height: 220px;
+  width: 300px;
+  height: 300px;
 
-  left: -120px;
-  bottom: -130px;
+  bottom: -180px;
+  left: -150px;
+
+  border: 1px solid rgba(13, 148, 136, 0.07);
 }
 
 
-/* =====================================================
+/* =========================================================
    MAIN CONTAINER
-===================================================== */
+========================================================= */
 
 .hero-container {
   position: relative;
+  z-index: 1;
 
-  z-index: 2;
-
-  width: 100%;
-  max-width: 1250px;
-
+  max-width: 1180px;
   margin: 0 auto;
 
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.08fr)
-    minmax(420px, 0.92fr);
+    minmax(0, 1.05fr)
+    minmax(380px, 0.95fr);
 
-  gap: 55px;
+  gap: 50px;
 
-  align-items: start;
+  align-items: center;
 }
 
 
-/* =====================================================
-   LEFT
-===================================================== */
+/* =========================================================
+   LEFT SIDE
+========================================================= */
 
 .hero-left {
-  width: 100%;
+  min-width: 0;
 }
 
 
-/* =====================================================
-   BADGE
-===================================================== */
+/* =========================================================
+   ROLE BADGE
+========================================================= */
 
 .role-badge {
   display: inline-flex;
 
   align-items: center;
+  gap: 9px;
 
-  gap: 10px;
+  padding: 8px 14px;
 
-  padding: 10px 17px;
+  border-radius: 999px;
 
-  border-radius: 30px;
+  background: rgba(13, 148, 136, 0.09);
+  border: 1px solid rgba(13, 148, 136, 0.16);
 
-  background: #e7f8f5;
+  color: #0f766e;
 
-  border: 1px solid #c9eee8;
-
-  color: #087f76;
-
-  font-size: 14px;
-
+  font-size: 12px;
   font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  margin-bottom: 18px;
 }
 
+
 .badge-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 
   border-radius: 50%;
 
-  background: #079f91;
+  background: #0d9488;
+
+  box-shadow:
+    0 0 0 4px rgba(13, 148, 136, 0.10);
 }
 
 
-/* =====================================================
+/* =========================================================
    NAME
-===================================================== */
+========================================================= */
 
 .hero-name {
-  margin: 22px 0 12px;
+  margin: 0;
 
-  color: #102a43;
-
-  font-size: clamp(
-    4rem,
-    6vw,
-    6.3rem
-  );
+  font-size: clamp(3.4rem, 6vw, 5.5rem);
 
   line-height: 0.94;
 
-  letter-spacing: -4px;
+  letter-spacing: -3px;
 
   font-weight: 800;
+
+  color: #102a43;
 }
+
 
 .hero-name span {
   display: block;
 
-  color: #079f91;
+  color: #0d9488;
 }
 
 
-/* =====================================================
+/* =========================================================
    TITLE
-===================================================== */
+========================================================= */
 
 .hero-title {
-  margin: 25px 0 15px;
+  margin: 18px 0 14px;
 
-  color: #183b56;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
 
-  font-size: clamp(
-    1.4rem,
-    2vw,
-    2rem
-  );
+  line-height: 1.3;
 
-  font-weight: 750;
+  font-weight: 700;
+
+  color: #243b53;
 }
+
 
 .hero-title span {
-  color: #102a43;
+  color: #0d9488;
 }
 
 
-/* =====================================================
+/* =========================================================
    SUMMARY
-===================================================== */
+========================================================= */
 
 .hero-summary {
   max-width: 690px;
 
   margin: 0;
 
-  color: #61788d;
+  color: #52606d;
 
-  font-size: 17px;
+  font-size: 15px;
 
-  line-height: 1.55;
+  line-height: 1.75;
 }
 
 
-/* =====================================================
+/* =========================================================
    ABOUT CARD
-===================================================== */
+========================================================= */
 
 .about-card {
-  margin-top: 22px;
+  margin-top: 24px;
 
-  padding: 22px 28px;
+  padding: 22px 24px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #f0faf8,
-      #f8fcfc
-    );
+  background: rgba(255, 255, 255, 0.92);
 
-  border: 1px solid #dcefeb;
+  border: 1px solid #d9e2ec;
 
-  border-radius: 17px;
+  border-radius: 16px;
 
   box-shadow:
-    0 8px 25px
-    rgba(24, 75, 80, 0.04);
+    0 8px 25px rgba(16, 42, 67, 0.05);
 }
+
 
 .about-heading {
   display: flex;
 
   align-items: center;
 
-  gap: 12px;
+  gap: 10px;
 
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 }
+
 
 .about-line {
-  width: 5px;
-  height: 32px;
+  width: 28px;
+  height: 3px;
 
-  border-radius: 10px;
+  border-radius: 999px;
 
-  background: #079f91;
+  background: #0d9488;
 }
+
 
 .about-heading h3 {
   margin: 0;
 
-  color: #183b56;
+  font-size: 16px;
 
-  font-size: 22px;
+  color: #102a43;
 }
+
 
 .about-card p {
-  margin: 0 0 10px;
+  margin: 0 0 11px;
 
-  color: #4e6578;
+  color: #52606d;
 
-  font-size: 14px;
+  font-size: 13px;
 
-  line-height: 1.55;
+  line-height: 1.7;
 }
+
 
 .about-card p:last-child {
   margin-bottom: 0;
 }
 
+
 .about-card strong {
-  color: #183b56;
+  color: #243b53;
 }
 
 
-/* =====================================================
+/* =========================================================
    CONTACT GRID
-===================================================== */
+========================================================= */
 
 .contact-grid {
   display: grid;
@@ -563,36 +541,34 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
   grid-template-columns:
     repeat(4, minmax(0, 1fr));
 
-  gap: 12px;
+  gap: 10px;
 
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
+
 .contact-card {
-  min-height: 78px;
+  min-width: 0;
 
   display: flex;
 
   align-items: center;
 
-  gap: 10px;
+  gap: 9px;
 
   padding: 12px;
 
-  background: #ffffff;
-
-  border: 1px solid #e0e8ed;
-
   border-radius: 12px;
 
-  box-shadow:
-    0 5px 15px
-    rgba(25, 65, 80, 0.04);
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
 }
 
+
 .contact-icon {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
 
   flex-shrink: 0;
 
@@ -601,128 +577,211 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
   align-items: center;
   justify-content: center;
 
-  border-radius: 50%;
+  border-radius: 9px;
 
-  background: #e1f7f3;
+  background: rgba(13, 148, 136, 0.10);
 
-  color: #078c80;
+  color: #0d9488;
 
-  font-size: 20px;
+  font-size: 14px;
 }
 
-.contact-card div:last-child {
+
+.contact-text {
   min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
 }
 
-.contact-card span {
-  display: block;
 
-  margin-bottom: 4px;
+.contact-text span {
+  font-size: 9px;
 
-  color: #8296a5;
+  text-transform: uppercase;
 
-  font-size: 12px;
+  letter-spacing: 0.7px;
+
+  color: #829ab1;
 }
 
-.contact-card strong {
-  display: block;
 
-  color: #304f61;
+.contact-text strong {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
 
   font-size: 11px;
 
-  white-space: nowrap;
+  color: #243b53;
 }
 
 
-/* =====================================================
-   BUTTONS
-===================================================== */
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
 
 .hero-actions {
   display: flex;
 
-  gap: 14px;
+  align-items: stretch;
 
-  margin-top: 30px;
+  gap: 10px;
+
+  margin-top: 20px;
 }
 
+
 .primary-button,
-.secondary-button {
-  min-height: 53px;
+.secondary-button,
+.resume-button {
+  min-height: 48px;
 
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
-  gap: 12px;
+  gap: 9px;
 
-  padding: 0 25px;
+  padding: 0 18px;
 
-  border-radius: 14px;
+  border-radius: 12px;
 
-  font-size: 14px;
+  font-size: 12px;
 
   font-weight: 700;
 
+  text-decoration: none;
+
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
 .primary-button {
-  background: #079f91;
+  background: #0d9488;
 
   color: #ffffff;
 
   box-shadow:
-    0 10px 22px
-    rgba(7, 159, 145, 0.18);
+    0 7px 18px rgba(13, 148, 136, 0.20);
 }
+
 
 .primary-button:hover {
   transform: translateY(-2px);
 
+  background: #0f766e;
+
   box-shadow:
-    0 14px 28px
-    rgba(7, 159, 145, 0.25);
+    0 10px 24px rgba(13, 148, 136, 0.25);
 }
 
-.primary-button strong {
-  font-size: 18px;
+
+.primary-button span {
+  font-size: 14px;
 }
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
 
 .secondary-button {
-  min-width: 225px;
-
   background: #ffffff;
 
-  border: 2px solid #079f91;
+  color: #243b53;
 
-  color: #078c80;
+  border: 1px solid #d9e2ec;
 }
+
 
 .secondary-button:hover {
   transform: translateY(-2px);
 
-  background: #f2fbfa;
+  border-color: #0d9488;
+
+  color: #0d9488;
+
+  box-shadow:
+    0 8px 20px rgba(16, 42, 67, 0.08);
 }
+
 
 .secondary-button strong {
-  font-size: 20px;
+  color: #0d9488;
+
+  font-size: 15px;
 }
 
 
-/* =====================================================
+/* =========================================================
+   RESUME BUTTON
+========================================================= */
+
+.resume-button {
+  background: #102a43;
+
+  color: #ffffff;
+
+  border: 1px solid #102a43;
+
+  box-shadow:
+    0 7px 17px rgba(16, 42, 67, 0.15);
+}
+
+
+.resume-button:hover {
+  transform: translateY(-2px);
+
+  background: #183b56;
+
+  border-color: #183b56;
+
+  box-shadow:
+    0 10px 22px rgba(16, 42, 67, 0.20);
+}
+
+
+.resume-button span {
+  font-size: 16px;
+}
+
+
+.resume-button::after {
+  content: "DOCX";
+
+  font-size: 8px;
+
+  padding: 3px 5px;
+
+  border-radius: 4px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
    RIGHT SIDE
-===================================================== */
+========================================================= */
 
 .hero-right {
-  position: relative;
-
-  min-height: 690px;
+  min-width: 0;
 
   display: flex;
 
@@ -732,348 +791,311 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
 }
 
 
-/* =====================================================
-   PHOTO
-===================================================== */
+/* =========================================================
+   PHOTO AREA
+========================================================= */
 
 .photo-area {
   position: relative;
 
-  width: min(
-    100%,
-    560px
-  );
+  width: min(100%, 500px);
 
-  height: 570px;
+  height: 500px;
 
-  margin-top: -10px;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 }
+
 
 .photo-decoration {
   position: absolute;
 
-  inset: 70px 35px 40px 40px;
+  width: 420px;
+  height: 420px;
 
-  border-radius: 45% 12% 35% 12%;
+  border-radius: 50%;
 
-  background: #dff5f1;
+  background:
+    radial-gradient(
+      circle,
+      rgba(13, 148, 136, 0.12),
+      rgba(13, 148, 136, 0.04) 58%,
+      transparent 59%
+    );
 
-  transform: rotate(7deg);
+  border: 1px solid rgba(13, 148, 136, 0.12);
 }
 
-.photo-decoration::after {
-  content: "";
-
-  position: absolute;
-
-  inset: 35px 0 0 0;
-
-  border: 2px solid #079f91;
-
-  border-radius: 30% 15% 30% 10%;
-
-  transform: rotate(-4deg);
-}
 
 .profile-photo {
   position: relative;
 
   z-index: 2;
 
-  width: 100%;
-  height: 100%;
+  width: 360px;
+  height: 430px;
 
   object-fit: cover;
 
-  /*
-   * Keep the face and shoulders visible.
-   * The original photo is portrait-oriented,
-   * so don't position it too high.
-   */
-  object-position: center 18%;
+  object-position: center top;
 
-  border-radius: 42% 16% 38% 14%;
+  border-radius: 22px;
 
-  filter: saturate(0.98);
+  background: #ffffff;
+
+  border: 7px solid #ffffff;
 
   box-shadow:
-    0 25px 50px
-    rgba(35, 70, 80, 0.10);
+    0 22px 55px rgba(16, 42, 67, 0.16);
 }
 
-/* =====================================================
+
+/* =========================================================
    EXPERIENCE BADGE
-===================================================== */
+========================================================= */
 
 .experience-badge {
   position: absolute;
 
-  z-index: 5;
+  z-index: 3;
 
-  right: 0;
-
-  bottom: 55px;
-
-  width: 145px;
-  height: 145px;
+  right: 22px;
+  bottom: 30px;
 
   display: flex;
 
-  flex-direction: column;
-
-  justify-content: center;
-
   align-items: center;
 
-  border-radius: 28px;
+  gap: 10px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #078c80,
-      #075f5b
-    );
+  padding: 12px 16px;
 
-  color: #ffffff;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #d9e2ec;
 
   box-shadow:
-    0 18px 35px
-    rgba(7, 100, 93, 0.22);
+    0 12px 30px rgba(16, 42, 67, 0.13);
 }
+
 
 .experience-badge strong {
-  font-size: 39px;
+  font-size: 25px;
 
   line-height: 1;
+
+  color: #0d9488;
 }
+
 
 .experience-badge span {
-  margin-top: 8px;
+  font-size: 10px;
 
-  text-align: center;
+  line-height: 1.35;
 
-  font-size: 13px;
+  color: #52606d;
 
-  line-height: 1.4;
+  font-weight: 600;
 }
 
 
-/* =====================================================
-   STATS
-===================================================== */
+/* =========================================================
+   STATS CARD
+========================================================= */
 
 .stats-card {
-  width: min(
-    100%,
-    560px
-  );
-
-  min-height: 100px;
+  width: min(100%, 500px);
 
   display: flex;
 
   align-items: center;
-
   justify-content: space-around;
 
-  margin-top: 5px;
+  padding: 16px 20px;
 
-  padding: 15px;
+  background: #ffffff;
 
-  background:
-    linear-gradient(
-      135deg,
-      #f0faf8,
-      #f7fcfc
-    );
+  border: 1px solid #d9e2ec;
 
-  border-radius: 20px;
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(16, 42, 67, 0.07);
 }
+
 
 .stat {
   flex: 1;
 
   text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
 }
+
 
 .stat strong {
-  display: block;
+  font-size: 18px;
 
-  color: #079f91;
-
-  font-size: 25px;
-
-  line-height: 1.2;
+  color: #0d9488;
 }
+
 
 .stat span {
-  display: block;
+  font-size: 9px;
 
-  margin-top: 5px;
+  line-height: 1.3;
 
-  color: #71869a;
+  text-transform: uppercase;
 
-  font-size: 11px;
+  letter-spacing: 0.6px;
 
-  line-height: 1.35;
+  color: #829ab1;
 }
+
 
 .stat-divider {
   width: 1px;
 
-  height: 55px;
+  height: 34px;
 
-  background: #c8ddda;
+  background: #e5e7eb;
 }
 
 
-/* =====================================================
+/* =========================================================
    TECHNOLOGY STRIP
-===================================================== */
+========================================================= */
 
 .technology-strip {
   position: relative;
 
-  z-index: 3;
+  z-index: 1;
 
-  width: 100%;
+  max-width: 1180px;
 
-  max-width: 1120px;
+  margin: 40px auto 0;
 
-  margin: 25px auto 0;
+  padding-top: 18px;
+
+  border-top: 1px solid #e5e7eb;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   flex-wrap: wrap;
 
-  gap: 12px;
+  gap: 10px;
 }
+
 
 .technology-strip span {
-  padding: 11px 18px;
+  padding: 7px 11px;
 
-  border-radius: 30px;
+  border-radius: 999px;
 
-  background: #e5f8f4;
+  background: #f8fafc;
 
-  color: #078c80;
+  border: 1px solid #e5e7eb;
 
-  font-size: 12px;
+  color: #52606d;
 
-  font-weight: 700;
+  font-size: 10px;
+
+  font-weight: 600;
 }
 
 
-/* =====================================================
-   LARGE TABLET
-===================================================== */
+/* =========================================================
+   TABLET
+========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1050px) {
 
   .hero {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 45px 28px 35px;
   }
 
   .hero-container {
     grid-template-columns: 1fr;
 
-    max-width: 850px;
+    gap: 40px;
   }
 
   .hero-left {
-    text-align: center;
-  }
+    max-width: 850px;
 
-  .hero-summary {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .about-card {
-    text-align: left;
-  }
-
-  .hero-actions {
-    justify-content: center;
+    margin: 0 auto;
   }
 
   .hero-right {
-    min-height: auto;
-  }
+    max-width: 600px;
 
-  .photo-area {
-    width: 450px;
-    height: 500px;
-  }
+    width: 100%;
 
-  .stats-card {
-    margin-bottom: 20px;
-  }
-
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 750px) {
-
-  .hero {
-    padding: 45px 20px 30px;
+    margin: 0 auto;
   }
 
   .hero-name {
-    font-size: 4.4rem;
+    font-size: clamp(3.5rem, 8vw, 5rem);
+  }
 
-    letter-spacing: -3px;
+  .photo-area {
+    width: 390px;
+
+    height: 420px;
+  }
+
+  .profile-photo {
+    width: 320px;
+
+    height: 390px;
+  }
+
+  .photo-decoration {
+    width: 370px;
+
+    height: 370px;
   }
 
   .contact-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .photo-area {
-    width: 400px;
-    height: 450px;
-  }
-
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
 
-@media (max-width: 550px) {
+@media (max-width: 750px) {
 
   .hero {
-    padding: 35px 15px 25px;
+    padding: 38px 20px 30px;
   }
 
-  .role-badge {
-    font-size: 11px;
-
-    padding: 8px 13px;
+  .hero-container {
+    gap: 30px;
   }
 
   .hero-name {
-    margin-top: 18px;
-
-    font-size: 3.4rem;
+    font-size: 3.8rem;
 
     letter-spacing: -2px;
   }
 
   .hero-title {
-    font-size: 1.25rem;
-
-    margin-top: 18px;
+    font-size: 1.2rem;
   }
 
   .hero-summary {
@@ -1081,108 +1103,271 @@ import profilePhoto from '../assets/Sumanjali_photo.PNG'
   }
 
   .about-card {
-    padding: 18px;
-
-    border-radius: 14px;
-  }
-
-  .about-card p {
-    font-size: 13px;
+    padding: 19px;
   }
 
   .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-area {
+    width: 390px;
+
+    max-width: 100%;
+
+    height: 420px;
+  }
+
+  .profile-photo {
+    width: 310px;
+
+    height: 380px;
+  }
+
+  .photo-decoration {
+    width: 360px;
+
+    height: 360px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+  .hero {
+    padding: 32px 16px 25px;
+  }
+
+  .hero-container {
+    gap: 25px;
+  }
+
+  .role-badge {
+    font-size: 10px;
+
+    padding: 7px 11px;
+  }
+
+  .hero-name {
+    font-size: 3.05rem;
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+  }
+
+  .hero-title {
+    margin-top: 14px;
+
+    font-size: 1.08rem;
+  }
+
+  .hero-summary {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+
+  /* About */
+  .about-card {
+    margin-top: 18px;
+
+    padding: 17px;
+  }
+
+  .about-card p {
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+
+  /* Contact */
+  .contact-grid {
     grid-template-columns: 1fr;
+
+    gap: 8px;
   }
 
-  .contact-card {
-    min-height: 65px;
-  }
 
+  /* Buttons */
   .hero-actions {
-    flex-direction: column;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-top: 18px;
   }
 
   .primary-button,
-  .secondary-button {
+  .secondary-button,
+  .resume-button {
     width: 100%;
+
+    min-height: 44px;
+
+    padding: 0 8px;
+
+    gap: 5px;
+
+    font-size: 10.5px;
+
+    border-radius: 10px;
   }
 
-  .hero-right {
-    width: 100%;
+  .primary-button strong,
+  .secondary-button strong,
+  .resume-button span {
+    font-size: 14px;
   }
 
+  .resume-button::after {
+    font-size: 6.5px;
+
+    padding: 2px 4px;
+  }
+
+
+  /* Photo */
   .photo-area {
-    width: 320px;
-    height: 370px;
+    width: 330px;
+
+    max-width: 100%;
+
+    height: 350px;
+  }
+
+  .profile-photo {
+    width: 270px;
+
+    height: 320px;
+
+    border-width: 5px;
+
+    border-radius: 18px;
+  }
+
+  .photo-decoration {
+    width: 300px;
+
+    height: 300px;
   }
 
   .experience-badge {
-    width: 110px;
-    height: 110px;
+    right: 4px;
 
-    right: -5px;
+    bottom: 18px;
 
-    bottom: 30px;
+    padding: 9px 12px;
   }
 
   .experience-badge strong {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .experience-badge span {
-    font-size: 10px;
+    font-size: 8px;
   }
 
-  .stats-card {
-    min-height: 85px;
 
-    border-radius: 15px;
+  /* Stats */
+  .stats-card {
+    padding: 13px 10px;
+
+    border-radius: 13px;
   }
 
   .stat strong {
-    font-size: 19px;
+    font-size: 15px;
   }
 
   .stat span {
-    font-size: 9px;
+    font-size: 7px;
   }
 
+  .stat-divider {
+    height: 28px;
+  }
+
+
+  /* Technology */
   .technology-strip {
-    gap: 7px;
+    margin-top: 28px;
+
+    padding-top: 14px;
+
+    gap: 6px;
   }
 
   .technology-strip span {
-    padding: 8px 12px;
+    font-size: 8px;
 
-    font-size: 10px;
+    padding: 6px 8px;
   }
 
 }
 
 
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
 
 @media (max-width: 380px) {
 
+  .hero {
+    padding-left: 13px;
+
+    padding-right: 13px;
+  }
+
   .hero-name {
-    font-size: 2.9rem;
+    font-size: 2.75rem;
+  }
+
+  .hero-title {
+    font-size: 1rem;
+  }
+
+  .hero-summary {
+    font-size: 12px;
+  }
+
+  .hero-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .resume-button {
+    min-height: 44px;
+
+    font-size: 11px;
   }
 
   .photo-area {
-    width: 285px;
-    height: 335px;
+    height: 330px;
   }
 
-  .experience-badge {
-    width: 95px;
-    height: 95px;
+  .profile-photo {
+    width: 245px;
+
+    height: 300px;
   }
 
-  .experience-badge strong {
-    font-size: 25px;
+  .photo-decoration {
+    width: 280px;
+
+    height: 280px;
   }
 
 }
+
 </style>

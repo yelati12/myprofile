@@ -2,7 +2,9 @@
    GLOBAL RESET
 ========================================= */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -11,6 +13,7 @@ html {
   padding: 0;
   width: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: 20px;
 }
 
 body {
@@ -31,12 +34,15 @@ body {
 
   background: #ffffff;
   color: #102a43;
+
+  overflow-x: hidden;
 }
 
 body,
 button,
 input,
-textarea {
+textarea,
+select {
   font-family: inherit;
 }
 
@@ -52,6 +58,25 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  margin: 0;
 }
 
 /* =========================================
@@ -70,7 +95,7 @@ img {
 }
 
 /* =========================================
-   PAGE
+   MAIN PAGE
 ========================================= */
 
 .app {
@@ -83,4 +108,120 @@ img {
   background: #ffffff;
 
   overflow-x: hidden;
+}
+
+/* =========================================
+   GLOBAL SECTION SPACING
+   Keeps the portfolio compact and consistent
+========================================= */
+
+.app > section {
+  width: 100%;
+  margin: 0;
+}
+
+/*
+  Default spacing between major sections.
+  Individual components can override this
+  when they need special layout treatment.
+*/
+.app > section + section {
+  margin-top: 0;
+}
+
+/* =========================================
+   COMMON SECTION CONTAINER
+========================================= */
+
+.section-container {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* =========================================
+   COMMON SECTION HEADER
+========================================= */
+
+.section-header {
+  margin: 0 0 28px;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: #102a43;
+}
+
+.section-header p {
+  margin: 8px 0 0;
+  color: #52606d;
+}
+
+/* =========================================
+   COMMON TEAL ACCENT
+========================================= */
+
+.teal {
+  color: #0d9488;
+}
+
+.text-muted {
+  color: #52606d;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+:focus-visible {
+  outline: 3px solid rgba(13, 148, 136, 0.35);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .section-container {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 10px;
+  }
+
+  body {
+    min-width: 320px;
+  }
+
+  .section-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section-header {
+    margin-bottom: 22px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .section-container {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
 }
