@@ -1,221 +1,398 @@
 <script setup>
 import { ref } from 'vue'
 
-const openIndex = ref(null)
+const openIndex = ref(0)
 
-const toggleJob = (index) => {
-  openIndex.value = openIndex.value === index ? null : index
-}
-
-const jobs = [
+const experiences = [
   {
-    company: 'Capgemini UK — Barclays',
-    role: 'Automation Engineer',
-    period: 'Apr 2025 – Present',
+    company: 'Amazon Development India',
+    role: 'Software Engineer',
+    focus: 'Test Automation & Quality Assurance',
+    tags: ['Java', 'Playwright', 'Selenium'],
     responsibilities: [
-      'Delivering end-to-end QA and test automation across Retail Banking and Fraud Detection systems within Agile/Scrum SDLC.',
-      'Built a scalable POM-based Playwright (Java) automation framework from scratch.',
-      'Automated authentication, fraud alert journeys, account management, and banking workflows.',
-      'Delivered UI and REST API automation using Playwright with parallel execution and retry mechanisms.',
-      'Performed ETL, SQL, database, and data validation testing.',
-      'Integrated automation suites with Azure DevOps, Jenkins and GitLab CI/CD pipelines.',
-      'Captured screenshots, videos, and trace files to accelerate defect resolution.'
+      'Worked on software test automation using Java, Playwright and Selenium.',
+      'Applied Page Object Model practices for maintainable automation.',
+      'Performed functional, regression, smoke and sanity testing.',
+      'Supported integration testing and UAT activities.',
+      'Performed REST API testing using Postman.',
+      'Logged and tracked defects using Jira.',
+      'Supported root cause analysis for application issues.',
+      'Worked within Agile/Scrum development environments.',
+      'Used Git, Jenkins and CI/CD practices.'
     ]
   },
   {
-    company: 'Capgemini India — Co-operative Bank',
-    role: 'Automation Test Engineer',
-    period: 'May 2024 – Apr 2025',
+    company: 'Knoah Solutions',
+    role: 'Software Engineer',
+    focus: 'Healthcare Application Testing & Automation',
+    tags: ['Testing', 'Automation', 'Healthcare'],
     responsibilities: [
-      'Led and mentored a QA automation team of 4–5 engineers.',
-      'Led mobile automation using Appium, Xcode, Android Studio and BrowserStack.',
-      'Developed Selenium Serenity BDD automation framework.',
-      'Reduced test flakiness and improved execution efficiency.',
-      'Collaborated with development teams to improve application stability.'
-    ]
-  },
-  {
-    company: 'Capgemini — ABN AMRO Netherlands',
-    role: 'Technical Lead | Automation Test Engineer',
-    period: 'Jan 2021 – May 2024',
-    responsibilities: [
-      'Delivered automation across Multi-Currency, Insurance, Mortgage and Retail Banking domains.',
-      'Built Hybrid Selenium-Cucumber BDD framework with TestNG.',
-      'Developed REST API automation framework and used Postman for API validation.',
-      'Implemented Selenium Grid for parallel execution.',
-      'Integrated automation with GitLab CI/CD pipelines.',
-      'Led test estimation, planning, strategy and reporting activities.',
-      'Performed Appium mobile testing using Sauce Labs.'
-    ]
-  },
-  {
-    company: 'Capgemini India — GE Healthcare',
-    role: 'Automation Test Engineer',
-    period: 'Aug 2017 – Jan 2021',
-    responsibilities: [
-      'Validated PET-CT medical imaging workflows and regulatory compliance.',
-      'Implemented Hybrid TestNG automation framework using POM.',
-      'Participated in Agile ceremonies and sprint delivery.',
-      'Performed Functional, Regression, Smoke, Performance and Load Testing.',
-      'Implemented Data-Driven Testing using Apache POI and TestNG.'
-    ]
-  },
-  {
-    company: 'Sutherland Global Services — Siemens',
-    role: 'Software Engineer (Test)',
-    period: 'Jan 2012 – Aug 2017',
-    responsibilities: [
-      'Delivered testing across Insurance and Healthcare applications.',
-      'Developed Selenium WebDriver automation using TestNG and Maven.',
-      'Performed requirement analysis and manual testing.',
-      'Contributed to test strategy, defect management and Agile delivery.'
+      'Performed testing of healthcare applications.',
+      'Executed functional, regression, smoke and sanity testing.',
+      'Supported integration testing activities.',
+      'Developed test automation using Java.',
+      'Applied Page Object Model practices.',
+      'Performed REST API testing using Postman.',
+      'Managed defects through Jira.',
+      'Supported root cause analysis.',
+      'Worked in an Agile/Scrum environment.'
     ]
   }
 ]
+
+const toggle = (index) => {
+  openIndex.value =
+    openIndex.value === index ? null : index
+}
 </script>
 
 <template>
-  <section class="experience-section">
-    <h2>Professional Experience</h2>
-    <p class="subtitle">
-      10+ Years of Quality Engineering, Test Automation and Technical Leadership Experience
-    </p>
+  <section id="experience" class="section">
 
-    <div
-      v-for="(job, index) in jobs"
-      :key="index"
-      class="job-card"
-    >
-      <div
-        class="job-header"
-        @click="toggleJob(index)"
-      >
-        <div>
-          <h3>{{ job.company }}</h3>
-          <h4>{{ job.role }}</h4>
-          <p>{{ job.period }}</p>
-        </div>
+    <div class="section-header">
 
-        <div class="arrow">
-          {{ openIndex === index ? '▲' : '▼' }}
-        </div>
+      <div class="section-badge">
+        CAREER JOURNEY
       </div>
 
-      <transition name="fade">
+      <h2>
+        Professional <span>Experience</span>
+      </h2>
+
+      <p>
+        Experience across software testing, automation,
+        technical support and quality assurance.
+      </p>
+
+    </div>
+
+    <div class="timeline">
+
+      <article
+        v-for="(item, index) in experiences"
+        :key="item.company"
+        class="experience-card"
+        :class="{ expanded: openIndex === index }"
+      >
+
+        <div class="timeline-marker">
+          {{ index + 1 }}
+        </div>
+
+        <button
+          class="experience-header"
+          type="button"
+          @click="toggle(index)"
+          :aria-expanded="openIndex === index"
+        >
+
+          <div>
+            <h3>{{ item.company }}</h3>
+
+            <h4>{{ item.role }}</h4>
+
+            <p>{{ item.focus }}</p>
+
+            <div class="tags">
+              <span
+                v-for="tag in item.tags"
+                :key="tag"
+              >
+                {{ tag }}
+              </span>
+            </div>
+          </div>
+
+          <div class="expand">
+            {{ openIndex === index ? '−' : '+' }}
+          </div>
+
+        </button>
+
         <div
           v-if="openIndex === index"
-          class="job-details"
+          class="responsibilities"
         >
+
+          <h5>Key Responsibilities</h5>
+
           <ul>
             <li
-              v-for="(item, idx) in job.responsibilities"
-              :key="idx"
+              v-for="responsibility in item.responsibilities"
+              :key="responsibility"
             >
-              {{ item }}
+              {{ responsibility }}
             </li>
           </ul>
+
         </div>
-      </transition>
+
+      </article>
+
     </div>
+
   </section>
 </template>
 
 <style scoped>
-.experience-section {
+
+.section {
   max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
+
+  margin: 0 auto;
+
+  padding: 90px 25px;
+
+  background: #ffffff;
 }
 
-.experience-section h2 {
+.section-header {
   text-align: center;
-  font-size: 2.5rem;
-  color: #111827;
-  margin-bottom: 10px;
-}
 
-.subtitle {
-  text-align: center;
-  color: #6b7280;
   margin-bottom: 50px;
 }
 
-.job-card {
-  background: white;
-  border-radius: 16px;
-  margin-bottom: 20px;
-  border-left: 5px solid #14b8a6;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+.section-badge {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  margin-bottom: 15px;
+
+  border-radius: 25px;
+
+  background: #e8f8f5;
+
+  border: 1px solid #c9eee8;
+
+  color: #078c80;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
 }
 
-.job-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px;
-  cursor: pointer;
+.section-header h2 {
+  margin: 0;
+
+  color: #102a43;
+
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
 }
 
-.job-header h3 {
-  color: #111827;
-  margin-bottom: 4px;
+.section-header h2 span {
+  color: #079f91;
 }
 
-.job-header h4 {
-  color: #14b8a6;
-  margin-bottom: 6px;
-}
+.section-header p {
+  max-width: 650px;
 
-.job-header p {
-  color: #6b7280;
-}
+  margin: 18px auto 0;
 
-.arrow {
-  font-size: 1.4rem;
-  color: #14b8a6;
-  font-weight: bold;
-}
+  color: #71869a;
 
-.job-details {
-  padding: 0 25px 25px;
-}
-
-.job-details ul {
-  padding-left: 20px;
-}
-
-.job-details li {
-  margin-bottom: 12px;
-  color: #374151;
   line-height: 1.7;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.3s ease;
+.timeline {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
 }
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  max-height: 0;
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 22px;
+
+  top: 30px;
+  bottom: 30px;
+
+  width: 1px;
+
+  background: #cceee8;
 }
 
-.fade-enter-to,
-.fade-leave-from {
-  opacity: 1;
-  max-height: 800px;
+.experience-card {
+  position: relative;
+
+  margin-left: 55px;
+
+  border: 1px solid #e1e9ee;
+
+  border-radius: 16px;
+
+  background: white;
+
+  transition: 0.25s ease;
 }
 
-@media (max-width: 768px) {
-  .job-header {
-    flex-direction: column;
-    align-items: flex-start;
+.experience-card:hover,
+.experience-card.expanded {
+  border-color: #a9ddd7;
+
+  box-shadow:
+    0 12px 30px rgba(25, 65, 80, 0.08);
+}
+
+.timeline-marker {
+  position: absolute;
+
+  left: -55px;
+  top: 25px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e8f8f5;
+
+  border: 1px solid #c9eee8;
+
+  color: #078c80;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.experience-header {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 35px;
+
+  gap: 20px;
+
+  padding: 25px;
+
+  border: 0;
+
+  background: transparent;
+
+  text-align: left;
+}
+
+.experience-header h3 {
+  margin: 0 0 5px;
+
+  color: #102a43;
+
+  font-size: 18px;
+}
+
+.experience-header h4 {
+  margin: 0 0 5px;
+
+  color: #079f91;
+
+  font-size: 14px;
+}
+
+.experience-header p {
+  margin: 0 0 15px;
+
+  color: #71869a;
+
+  font-size: 13px;
+}
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.tags span {
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: #f3f8f8;
+
+  color: #496b73;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.expand {
+  color: #078c80;
+
+  font-size: 22px;
+
+  text-align: center;
+}
+
+.responsibilities {
+  padding: 0 25px 25px;
+
+  border-top: 1px solid #edf1f3;
+}
+
+.responsibilities h5 {
+  margin: 20px 0 10px;
+
+  color: #102a43;
+
+  font-size: 13px;
+}
+
+.responsibilities ul {
+  margin: 0;
+
+  padding-left: 18px;
+
+  color: #61788d;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+@media (max-width: 650px) {
+
+  .section {
+    padding: 65px 16px;
   }
 
-  .arrow {
-    margin-top: 10px;
+  .timeline::before {
+    display: none;
   }
+
+  .experience-card {
+    margin-left: 0;
+  }
+
+  .timeline-marker {
+    display: none;
+  }
+
+  .experience-header {
+    padding: 20px;
+  }
+
+  .responsibilities {
+    padding: 0 20px 20px;
+  }
+
 }
 </style>
